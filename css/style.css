@@ -225,7 +225,7 @@ body {
 @font-face {
   font-family: livingstone;
   font-weight: bold;
-  src: url("livingstone.otf") format("opentype");
+  src: url("Livingstone.otf") format("opentype");
 }
 
 .poppins-thin {
