@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Ascendants</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+  </head>
+  <body>
+    <video
+      class="video-bg"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source
+        src="https://v1.pinimg.com/videos/iht/expMp4/db/21/99/db2199a03e5e910ad2e51464e8f4e1e9_t4.mp4"
+        type="video/mp4"
+      />
+      Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <div class="blink neon">
+      <p class="poppins-regular p-0 mb-0 lh-sm">IT'S A BEAUTIFUL PLACE TO DIE, DOESN'T?</p>
+      <h1
+        class="bebas-neue-regular title"
+        style="font-family: livingstone"
+      >
+        Ascendants
+      </h1>
+    </div>
+
+    <img
+      id="profile-img"
+      src="ascendants.png"
+      alt="Imagen flotante"
+      class="imagen-flotante"
+    />
+
+    <div class="footer-text container">
+      <div class="row">
+        <div
+          class="col-md-6 col-6"
+          style="text-align: left; font-size: 50px; color: #ddd5d1"
+        >
+          <span class="spin-reverse">𒋲</span>
+        </div>
+        <div
+          class="col-md-6 col-6"
+          style="text-align: right; font-size: 50px; color: #ddd5d1"
+        >
+          <span class="spin">𒋲</span>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
+
+      <div class="row">
+        <div
+          class="col-md-12 col-12 text-justify poppins-regular neon-light"
+          style="text-align: justify"
+        >
+          MY DEAR, FIND WHAT YOU LOVE AND LET IT KILL YOU. LET IT DRAIN YOU OF YOUR ALL. LET IT CLING ONTO YOUR BACK AND WEIGH YOU DOWN INTO EVENTUAL NOTHINGNESS. LET IT KILL YOU AND LET IT DEVOUR
+          YOUR REMAINS. FOR ALL THINGS WILL KILL YOU, BOTH SLOWLY AND FASTLY, BUT IT’S MUCH BETTER TO BE KILLED BY A LOVER. ~ FALSELY YOURS
+        </div>
+        <div
+          class="col-md-12 col-12"
+          style="justify-content: center; align-items: center; align-content: center"
+        >
+          <p class="anonymous-pro-regular mb-0">
+            <img
+              id="skull"
+              src="skull.png"
+              style="width: 110px"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://unpkg.com/powerglitch@2.3.3/dist/powerglitch.min.js"></script>
+    <script>
+      const text = document.querySelector(".text");
+      text.innerHTML = text.innerText
+        .split("")
+        .map((char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`)
+        .join("");
+    </script>
+
+    <script>
+      window.addEventListener("load", function () {
+        PowerGlitch.glitch("#skull", {
+          hideOverflow: true,
+          timing: {
+            duration: 2250,
+          },
+          shake: {
+            amplitudeX: 0,
+            amplitudeY: 0,
+          },
+          slice: {
+            count: 39,
+            minHeight: 0.01,
+            maxHeight: 0.16,
+          },
+        });
+      });
+      window.addEventListener("mousedown", playMP3);
+      let sound = new Audio("./music/king.mp3");
+      function playMP3(e) {
+        e.preventDefault();
+        sound.play();
+      }
+
+      document.addEventListener("contextmenu", (event) => event.preventDefault());
+    </script>
+  </body>
+</html>
